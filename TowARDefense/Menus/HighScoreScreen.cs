@@ -55,6 +55,12 @@ namespace TowARDefense.Menus
 
         public void readHighScores()
         {
+            FileStream f;
+            if (!File.Exists("highscore.txt"))
+            {
+                f = File.Create("highscore.txt");
+                f.Close();
+            }
             // Load HighScrore
             StreamReader reader = new StreamReader("highscore.txt");
             try

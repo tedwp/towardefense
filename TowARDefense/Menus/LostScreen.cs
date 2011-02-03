@@ -143,6 +143,13 @@ namespace TowARDefense.Menus
         {
             highScores.Clear();
 
+            FileStream f;
+            if (!File.Exists("highscore.txt"))
+            {
+                f = File.Create("highscore.txt");
+                f.Close();
+            }
+
             // Load HighScrore
             StreamReader reader = new StreamReader("highscore.txt");
             try

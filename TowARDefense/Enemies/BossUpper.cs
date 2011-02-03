@@ -26,8 +26,6 @@ namespace TowARDefense.Enemies
 {
     class BossUpper : Enemy
     {
-        private int stage;
-
         public BossUpper(TowARDefense parent_f, int stage)
             : base(parent_f)
         {
